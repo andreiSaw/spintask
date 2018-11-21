@@ -1,0 +1,9 @@
+never goalNeverReached {    /* !(! (<> ((((m1==m2)) && ((m2==m3))) && ((m3==m1))))) */
+T0_init:
+	do
+	:: atomic { (((((m1==m2)) && ((m2==m3))) && ((m3==m1)))) -> assert(!(((((m1==m2)) && ((m2==m3))) && ((m3==m1))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
